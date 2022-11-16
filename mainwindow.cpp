@@ -51,6 +51,8 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
          mx.unlock();
          pause--;
       }
+   } else if (event->key() == Qt::Key_Escape) {
+      this->close();
    }
 }
 
@@ -65,7 +67,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
                                                               QMessageBox::No);
 
    if (resBtn != QMessageBox::Yes) {
-      r->setCalculating(false);      
+      r->setCalculating(false);
       event->accept();
    } else {
       r->setStop(true);

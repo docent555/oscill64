@@ -16,7 +16,7 @@ public:
 
 protected:
    void closeEvent(QCloseEvent *) override;
-   void keyPressEvent(QKeyEvent *) override;
+   void keyPressEvent(QKeyEvent *) override;  
 
 private:
    QThread *thread;
